@@ -1,0 +1,43 @@
+.button {
+  margin-left: 10%;
+  margin: 1% 30% 1% ;
+  padding: 10px;
+  border: silver;
+  text-align: center;
+  text-decoration:currentColor;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 20px;
+  background-color: rgb(168, 218, 31);
+}
+
+table {
+  background-color: lemonchiffon;
+  text-transform: capitalize;
+}
+table,
+th,
+td {
+  border: 1px solid silver;
+}
+
+form {
+  margin: auto;
+  width: 40%;
+  border: 3px solid silver;
+  padding: 10px;
+}
+input {
+  color:black;
+  text-align-last: center;
+  width: 40%;
+  margin-left: 30%;
+  border: 3px solid silver;
+  padding: 10px;
+}
+
+h2 {
+  text-align: center;
+  margin: auto;
+}
+
