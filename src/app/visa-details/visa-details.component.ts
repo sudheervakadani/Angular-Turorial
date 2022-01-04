@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-visa-details',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VisaDetailsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
+  }
+  navigateToVisa(section: string) {
+    this.router.navigate(['visa/' + section]);
+    // console.log(`visa/${section}`, "visa dynamic");
+
   }
 
 }

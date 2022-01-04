@@ -1,6 +1,12 @@
 <div class="column">
   <h2>Visa Details </h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit
-    nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo
-    tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  <p> New guidlines were given due to covid-19 which may effect the Visa processesing. to learn more please advised to go through the following links.</p>
+
+    <div class="insidenav">
+      <a (click)="navigateToVisa('processing')">Processing Time</a>
+      <a (click)="navigateToVisa('document')">Documents Check List</a>
+      <a (click)="navigateToVisa('eligibility')">Eligibility Criteria</a>
+      <a (click)="navigateToVisa('apply')">Apply Online</a>
+      <router-outlet></router-outlet>
+    </div>
 </div>
