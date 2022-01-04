@@ -18,3 +18,11 @@
     width: 100%;
   }
 }
+.insidenav a {
+  float: left;
+  display: block;
+  color: #f83a0a;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}

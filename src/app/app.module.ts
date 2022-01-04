@@ -8,6 +8,10 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { CompanyDetailsComponent } from './company-details/company-details.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { VisaDetailsComponent } from './visa-details/visa-details.component';
+import { ProcesingTimeComponent } from './procesing-time/procesing-time.component';
+import { DocumentChecklistComponent } from './document-checklist/document-checklist.component';
+import { EligibilityCriteriaComponent } from './eligibility-criteria/eligibility-criteria.component';
+import { ApplyOnlineComponent } from './apply-online/apply-online.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { VisaDetailsComponent } from './visa-details/visa-details.component';
     NavigationComponent,
     CompanyDetailsComponent,
     EmployeeDetailsComponent,
-    VisaDetailsComponent
+    VisaDetailsComponent,
+    ProcesingTimeComponent,
+    DocumentChecklistComponent,
+    EligibilityCriteriaComponent,
+    ApplyOnlineComponent
   ],
   imports: [
     BrowserModule,
