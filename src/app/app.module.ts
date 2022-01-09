@@ -12,6 +12,10 @@ import { ProcesingTimeComponent } from './procesing-time/procesing-time.componen
 import { DocumentChecklistComponent } from './document-checklist/document-checklist.component';
 import { EligibilityCriteriaComponent } from './eligibility-criteria/eligibility-criteria.component';
 import { ApplyOnlineComponent } from './apply-online/apply-online.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { UniversityComponent } from './university/university.component';
+
 
 @NgModule({
   declarations: [
@@ -24,11 +28,15 @@ import { ApplyOnlineComponent } from './apply-online/apply-online.component';
     ProcesingTimeComponent,
     DocumentChecklistComponent,
     EligibilityCriteriaComponent,
-    ApplyOnlineComponent
+    ApplyOnlineComponent,
+    UniversityComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    CommonModule,
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

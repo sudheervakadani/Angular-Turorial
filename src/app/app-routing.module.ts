@@ -6,6 +6,7 @@ import { DocumentChecklistComponent } from './document-checklist/document-checkl
 import { EligibilityCriteriaComponent } from './eligibility-criteria/eligibility-criteria.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { ProcesingTimeComponent } from './procesing-time/procesing-time.component';
+import { UniversityComponent } from './university/university.component';
 import { VisaDetailsComponent } from './visa-details/visa-details.component';
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
       { path: 'apply', component: ApplyOnlineComponent },
     ],
   },
+  { path: 'university', component: UniversityComponent},
 ];
 
 @NgModule({

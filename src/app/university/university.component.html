@@ -1,0 +1,36 @@
+<button (click)="searchUniversities()"> Search</button>
+<table id="customers" *ngIf="showTable">
+  <tr>
+      <th>Country Code</th>
+      <th>Country</th>
+      <th>University Name</th>
+      <th>Domains</th>
+      <th>Web Pages</th>
+      <th>Status</th>
+  </tr>
+  <!-- <tr>
+      <td >{{university.alpha_two_code}}</td>
+      <td>{{university.country}}</td>
+      <td>{{university.name}}</td>
+      <td>{{university.domains.length}}</td>
+      <td>{{university.web_pages.length}}</td>
+      <td>{{university.status}}</td>
+  </tr>
+  <tr>
+      <td>{{university.alpha_two_code}}</td>
+      <td>{{university.country}}</td>
+      <td>{{university.name}}</td>
+      <td>{{university.domains.length}}</td>
+      <td>{{university.web_pages.length}}</td>
+      <td>{{university.status}}</td>
+  </tr> -->
+  <tr *ngFor= "let university of universityList">
+      <td>{{university.alpha_two_code}}</td>
+      <td>{{university.country}}</td>
+      <td>{{university.name}}</td>
+      <td>{{university.domains.length}}</td>
+      <td>{{university.web_pages.length}}</td>
+      <td>{{university.status}}</td>
+  </tr>
+
+</table>
