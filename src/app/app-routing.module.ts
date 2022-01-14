@@ -5,6 +5,7 @@ import { CompanyDetailsComponent } from './company-details/company-details.compo
 import { DocumentChecklistComponent } from './document-checklist/document-checklist.component';
 import { EligibilityCriteriaComponent } from './eligibility-criteria/eligibility-criteria.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
+import { MultipleComponentsComponent } from './multiple-components/multiple-components.component';
 import { ProcesingTimeComponent } from './procesing-time/procesing-time.component';
 import { UniversityComponent } from './university/university.component';
 import { VisaDetailsComponent } from './visa-details/visa-details.component';
@@ -21,6 +22,7 @@ const routes: Routes = [
     ],
   },
   { path: 'university', component: UniversityComponent},
+  { path: 'multiple-component', component: MultipleComponentsComponent},
 ];
 
 @NgModule({

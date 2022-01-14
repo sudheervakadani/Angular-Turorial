@@ -1,0 +1,18 @@
+<p>table-component works!</p>
+  <table id="customers" >
+    <tr>
+        <th>Country Code</th>
+        <th>Country</th>
+        <th>University Name</th>
+        <!-- <th>Domains</th>
+        <th>Web Pages</th>
+        <th>Status</th> -->
+    </tr>
+  <tr *ngFor="let university of universityListData">
+    <td>{{university.alpha_two_code}}</td>
+    <td>{{university.country}}</td>
+    <td>{{university.name}}</td>
+
+  </tr>
+</table>
+<p>table works</p>

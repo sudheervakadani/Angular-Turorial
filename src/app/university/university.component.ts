@@ -11,6 +11,7 @@ export class UniversityComponent implements OnInit {
   successResponse: any;
   errormessage: any;
   showTable: boolean = false;
+  country: string = 'USA';
   student: any = {
     id: 1,
     name: 'john',
@@ -37,29 +38,18 @@ export class UniversityComponent implements OnInit {
   // ]
   //this.emp.length = 2
 
-  constructor(private universityService: UniversityService) {}
+  constructor(private universityService: UniversityService) {
+    // this.searchUniversities();
+  }
 
   ngOnInit(): void {}
+
   searchUniversities() {
-    this.universityService.getUniversitiesList().subscribe(
+    console.log(this.country);
+    this.universityService.getUniversitiesList(this.country).subscribe(
       (successResponse: any) => {
         this.showTable = true;
-        successResponse.forEach((university) => {
-          if(university.country === 'United States' || university.domains.length === 2) {
-            this.universityList.push(university);
-          }
-          // if (
-          //   university.country === 'United States' ||
-          //   university.country === 'India'
-          // ) {
-          //   university['status'] = 'open';
-          //   this.universityList.push(university);
-          // }
-          //  else {
-          //   university['status'] = 'close';
-          //   this.universityList.push(university);
-          // }
-        });
+        this.universityList = successResponse;
         console.log(this.universityList);
       },
       (errorResponse: any) => {
@@ -72,9 +62,24 @@ export class UniversityComponent implements OnInit {
 // t && t && t && t = t
 // t && f = f
 // f && t = f
-//f && f = f
+// f && f = f
 
 // t || t = t
 // t || f = t
 // f || t = t
 // f || f = f
+// getAllStudents()
+
+// getAllStudents() {
+
+// }
+
+// getStudentById(12)
+
+// getStudentById(id: number) {
+
+// }
+// getStudentByName('saleem')
+// getStudentByName(name: string) {
+
+// }

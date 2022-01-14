@@ -1,4 +1,26 @@
+<br>
+<label for="countryName">Enter Country Name</label>
+<br>
+<input type="text" name="countryName" id="countryName" [(ngModel)]="country">
+{{country}}
 <button (click)="searchUniversities()"> Search</button>
+
+<br>
+<select (click)="searchUniversities()" name="demo" id="#">
+  <option selected="selected" value="united states">USA</option>
+  <option value="canada"> Canada </option>
+  <option value="India">India</option>
+  <option value="Nepal"> Nepal</option>
+  <option value="Japan">Japan</option>
+  <!-- <option value=""></option>
+  <option value=""></option>
+  <option value=""></option>
+  <option value=""></option>
+  <option value=""></option>
+  <option value=""></option> -->
+  </select>
+
+
 <table id="customers" *ngIf="showTable">
   <tr>
       <th>Country Code</th>

@@ -30,4 +30,8 @@ export class NavigationComponent implements OnInit {
     this.router.navigate(['university']);
     console.log('university');
   }
+  navigateToMultipleComponents() {
+    this.router.navigate(['multiple-component']);
+    console.log('Multiple-Components');
+  }
 }
