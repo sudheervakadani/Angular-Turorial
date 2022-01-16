@@ -1,4 +1,20 @@
-<label for="university"> Enter a Country Name</label>
+<!-- <label for="university"> Enter a Country Name</label>
 <input type="text" name="university" id="university" [(ngModel)]="country"><br>
-<button (click)="getResults()"> click</button>
+<label for="shopping" >Select An Option</label><br> -->
+<select (change)="getResults()" name="shopping" id="shopping">
+  <option selected="selected"   [value]="country" [(ngModel)]="country"> United States</option>
+  <option value="default">----</option>
+  <option value="united states"> USA</option>
+  <option value="canada"> canada</option>
+  <option value="nepal">Nepal</option>
+  <option value="japan">Japan</option>
+  <option value="india">India</option>
+  <option value="brazil"> Brazil</option>
+
+  <select name="countrys" id="country" [(ngModel)]= "country" (change)="getResults()">
+    <option value="united states">USA</option>
+    <option value="canada">Canada</option>
+</select>
+
+<!-- <button (click)="getResults()"> click</button> -->
 <app-table-component *ngIf="showTable" [universityListData]="universityList"></app-table-component>
