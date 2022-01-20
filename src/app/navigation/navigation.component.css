@@ -6,6 +6,7 @@
 
 /* Style the topnav links */
 .topnav a {
+  border-radius: 20px;
   float: left;
   display: block;
   color: #f2f2f2;
@@ -16,6 +17,7 @@
 
 /* Change color on hover */
 .topnav a:hover {
+  border-radius: 8px;
   background-color: #ddd;
-  color: black;
+  color: rgb(209, 129, 25);
 }

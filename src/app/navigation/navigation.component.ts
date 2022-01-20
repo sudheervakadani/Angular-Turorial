@@ -25,4 +25,8 @@ export class NavigationComponent implements OnInit {
     this.router.navigate(['visa']);
     console.log('Visa called');
   }
+  navigateToA(){
+    this.router.navigate(['A']);
+    console.log('A Called')
+  }
 }

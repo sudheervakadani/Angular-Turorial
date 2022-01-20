@@ -1,11 +1,18 @@
-<app-header></app-header>
-<app-navigation></app-navigation>
-<div class="row">
+<!-- {{showSpinner}} -- {{!showSpinner}} -->
 
-<!-- <app-company-details></app-company-details>
+<div *ngIf="!showSpinner">
+
+
+  <app-header></app-header>
+  <app-navigation></app-navigation>
+  <div class="row">
+
+    <!-- <app-company-details></app-company-details>
 <app-employee-details></app-employee-details>
 <app-visa-details></app-visa-details> -->
 
-<router-outlet></router-outlet>
+    <router-outlet></router-outlet>
+  </div>
 </div>
+<h1 *ngIf="showSpinner">Loading....</h1>
 

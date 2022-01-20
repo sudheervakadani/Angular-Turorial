@@ -1,6 +1,9 @@
 /* Style the header */
 .header {
+  border-radius: 25px;
   background-color: #f1f1f1;
+  background: rgb(153, 150, 150);
   padding: 20px;
   text-align: center;
 }
+

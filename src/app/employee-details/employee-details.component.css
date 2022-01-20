@@ -18,3 +18,10 @@
     width: 100%;
   }
 }
+div {
+  border-radius: 25px;
+  background: #67dce0;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+}

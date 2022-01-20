@@ -14,7 +14,7 @@ export class VisaDetailsComponent implements OnInit {
   }
   navigateToVisa(section: string) {
     this.router.navigate(['visa/' + section]);
-    // console.log(`visa/${section}`, "visa dynamic");
+    // console.log(`visa/${section}`);
 
   }
 
