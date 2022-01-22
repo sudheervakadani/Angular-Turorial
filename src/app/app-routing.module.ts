@@ -5,11 +5,14 @@ import { CompanyDetailsComponent } from './company-details/company-details.compo
 import { DocumentChecklistComponent } from './document-checklist/document-checklist.component';
 import { EligibilityCriteriaComponent } from './eligibility-criteria/eligibility-criteria.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
+import { HomeComponent } from './home/home.component';
 import { MultipleComponentsComponent } from './multiple-components/multiple-components.component';
 import { ProcesingTimeComponent } from './procesing-time/procesing-time.component';
 import { VisaDetailsComponent } from './visa-details/visa-details.component';
 
 const routes: Routes = [
+  { path:'', redirectTo: "home", pathMatch: 'full'},
+  { path: 'home', component: HomeComponent},
   { path: 'company', component: CompanyDetailsComponent },
   { path: 'employees', component: EmployeeDetailsComponent },
  { path: 'visa', loadChildren: () => import('./visa-details/visa-details.module').then(m => m.VisaDetailsModule)},
