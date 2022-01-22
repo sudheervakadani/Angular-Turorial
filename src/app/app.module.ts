@@ -19,9 +19,11 @@ import { FormsModule } from '@angular/forms';
 import { MultipleComponentsComponent } from './multiple-components/multiple-components.component';
 import { FormComponentComponent } from './multiple-components/form-component/form-component.component';
 import { TableComponentComponent } from './multiple-components/table-component/table-component.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
+    HomeComponent,
     AppComponent,
     HeaderComponent,
     NavigationComponent,
@@ -36,6 +38,7 @@ import { TableComponentComponent } from './multiple-components/table-component/t
     MultipleComponentsComponent,
     FormComponentComponent,
     TableComponentComponent
+
 
   ],
   imports: [

@@ -11,6 +11,10 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  navigateToHome() {
+    this.router.navigate(['home']);
+  }
+
   navigateToCompany() {
     this.router.navigate(['company']);
     console.log('company called');

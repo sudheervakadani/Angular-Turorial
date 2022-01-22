@@ -11,6 +11,7 @@ const routes: Routes = [
     path: '',
     component: VisaDetailsComponent,
     children: [
+      { path: '', redirectTo:'processing', pathMatch: 'full'},
       { path: 'processing', component: ProcesingTimeComponent },
       { path: 'document', component: DocumentChecklistComponent },
       { path: 'eligibility', component: EligibilityCriteriaComponent },
