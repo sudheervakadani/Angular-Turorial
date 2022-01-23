@@ -14,7 +14,7 @@ export class MenuComponent implements OnInit {
   }
 
   navigateTo(section: string){
-    this.router.navigate(['/menu' + section]);
+    this.router.navigate(['/menu/' + section]);
 
   }
 
