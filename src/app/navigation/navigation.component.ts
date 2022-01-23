@@ -11,6 +11,10 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  navigateToHome(){
+    this.router.navigate(['home']);
+  }
+
   navigateToCompany() {
     this.router.navigate(['company']);
     console.log('company called');
@@ -29,4 +33,9 @@ export class NavigationComponent implements OnInit {
     this.router.navigate(['A']);
     console.log('A Called')
   }
+
+  navigateToMenu() {
+    this.router.navigate(['menu']);
+  }
+
 }

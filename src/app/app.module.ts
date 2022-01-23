@@ -17,6 +17,12 @@ import { AComponent } from './a/a.component';
 import { BComponent } from './a/b/b.component';
 import { CComponent } from './a/c/c.component';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { MenuComponent } from './menu/menu.component';
+import { MensComponent } from './mens/mens.component';
+import { WomensComponent } from './womens/womens.component';
+import { KidsComponent } from './kids/kids.component';
+import { AdsComponent } from './ads/ads.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +38,13 @@ import { FormsModule } from '@angular/forms';
     ApplyOnlineComponent,
     AComponent,
     BComponent,
-    CComponent
+    CComponent,
+    HomeComponent,
+    MenuComponent,
+    MensComponent,
+    WomensComponent,
+    KidsComponent,
+    AdsComponent
 
   ],
   imports: [

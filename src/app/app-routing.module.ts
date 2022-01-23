@@ -10,8 +10,15 @@ import { EligibilityCriteriaComponent } from './eligibility-criteria/eligibility
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { ProcesingTimeComponent } from './procesing-time/procesing-time.component';
 import { VisaDetailsComponent } from './visa-details/visa-details.component';
+import { HomeComponent } from './home/home.component';
+import { MenuComponent } from './menu/menu.component';
+import { MensComponent } from './mens/mens.component';
+import { WomensComponent } from './womens/womens.component';
+import { KidsComponent } from './kids/kids.component';
+import { AdsComponent } from './ads/ads.component';
 
 const routes: Routes = [
+  { path: 'home', component: HomeComponent},
   { path: 'company', component: CompanyDetailsComponent },
   { path: 'employees', component: EmployeeDetailsComponent },
   {
@@ -30,6 +37,14 @@ const routes: Routes = [
       { path: 'C', component: CComponent },
     ],
   },
+{ path: 'menu', component: MenuComponent,
+children: [
+  { path: 'ads', component: AdsComponent },
+  { path: 'mens', component: MensComponent },
+  { path: 'women', component: WomensComponent },
+  { path: 'kids', component: KidsComponent },
+],
+},
 ];
 
 @NgModule({
