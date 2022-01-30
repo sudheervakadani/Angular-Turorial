@@ -1,15 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { GrabService } from '../grab.service';
 
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.css'],
 })
-export class NavigationComponent implements OnInit {
-  constructor(private router: Router) {}
+export class NavigationComponent implements OnInit, OnDestroy{
 
-  ngOnInit(): void {}
+  studentData: any;
+
+  constructor(private router: Router, private grabService: GrabService) {}
+
+
+  ngOnInit(): void {
+    this.grabService.studentDetails.subscribe(
+      (data) => {
+        this.studentData = data;
+
+      }
+    );
+  }
+
 
   navigateToHome(){
     this.router.navigate(['home']);
@@ -38,4 +51,16 @@ export class NavigationComponent implements OnInit {
     this.router.navigate(['menu']);
   }
 
+  navigateToStudent() {
+    this.router.navigate(['student']);
+  }
+
+  navigateToSignUp() {
+    this.router.navigate(['signup']);
+  }
+
+  ngOnDestroy(): void {
+    //this.grabService.updateDetailsInfo({});
+   // this.studentData ={};
+  }
 }

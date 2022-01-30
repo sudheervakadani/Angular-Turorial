@@ -16,16 +16,23 @@ import { MensComponent } from './mens/mens.component';
 import { WomensComponent } from './womens/womens.component';
 import { KidsComponent } from './kids/kids.component';
 import { AdsComponent } from './ads/ads.component';
+import { StudentComponent } from './student/student.component';
+import { ResultsComponent } from './student/results/results/results.component';
+import { CreateComponent } from './student/create/create/create.component';
+import { UpdateComponent } from './student/results/results/update/update.component';
+import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: "home", pathMatch: "full"},
-  { path: 'home', component: HomeComponent},
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  {path: 'signup', component: SignupComponent},
   { path: 'company', component: CompanyDetailsComponent },
   { path: 'employees', component: EmployeeDetailsComponent },
   {
-    path: 'visa', component: VisaDetailsComponent,
+    path: 'visa',
+    component: VisaDetailsComponent,
     children: [
-      { path:'', redirectTo: "processing", pathMatch: 'full'},
+      { path: '', redirectTo: 'processing', pathMatch: 'full' },
       { path: 'processing', component: ProcesingTimeComponent },
       { path: 'document', component: DocumentChecklistComponent },
       { path: 'eligibility', component: EligibilityCriteriaComponent },
@@ -33,21 +40,35 @@ const routes: Routes = [
     ],
   },
   {
-    path: 'A', component: AComponent,
+    path: 'A',
+    component: AComponent,
     children: [
       { path: 'B', component: BComponent },
       { path: 'C', component: CComponent },
     ],
   },
-{ path: 'menu', component: MenuComponent,
-children: [
-  { path:'', redirectTo: "ads", pathMatch: 'full'},
-  { path: 'ads', component: AdsComponent },
-  { path: 'mens', component: MensComponent },
-  { path: 'womens', component: WomensComponent },
-  { path: 'kids', component: KidsComponent },
-],
-},
+  {
+    path: 'menu',
+    component: MenuComponent,
+    children: [
+      { path: '', redirectTo: 'ads', pathMatch: 'full' },
+      { path: 'ads', component: AdsComponent },
+      { path: 'mens', component: MensComponent },
+      { path: 'womens', component: WomensComponent },
+      { path: 'kids', component: KidsComponent },
+    ],
+  },
+  {
+    path: 'student',
+    component: StudentComponent,
+    children: [
+      { path: '', redirectTo: 'results', pathMatch: 'full' },
+      { path: 'results', component: ResultsComponent},
+      { path: 'update', component: UpdateComponent},
+      { path: 'create', component: CreateComponent },
+
+    ],
+  },
 ];
 
 @NgModule({

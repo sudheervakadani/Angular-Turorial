@@ -1,0 +1,20 @@
+<p>results works!</p>
+<button (click)="navigateToCreate()"> Create</button>
+<table>
+  <tr>
+    <th>name</th>
+    <th>course</th>
+    <th>year</th>
+    <th>phone number</th>
+    <th> Created ON</th>
+    <th>Actions</th>
+  </tr>
+  <tr *ngFor="let student of studentData">
+    <td>{{student.studentName}}</td>
+    <td>{{student.course | uppercase}}</td>
+    <td>{{student.year}}</td>
+    <td>{{student.studentPhoneNumber}}</td>
+    <td>{{student.createdOn | date }}</td>
+    <td> <button (click)="navigateToUpdate(student)">Update</button> <button>Delete</button></td>
+  </tr>
+</table>

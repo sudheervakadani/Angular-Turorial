@@ -16,13 +16,18 @@ import { ApplyOnlineComponent } from './apply-online/apply-online.component';
 import { AComponent } from './a/a.component';
 import { BComponent } from './a/b/b.component';
 import { CComponent } from './a/c/c.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { MensComponent } from './mens/mens.component';
 import { WomensComponent } from './womens/womens.component';
 import { KidsComponent } from './kids/kids.component';
 import { AdsComponent } from './ads/ads.component';
+import { StudentComponent } from './student/student.component';
+import { CreateComponent } from './student/create/create/create.component';
+import { ResultsComponent } from './student/results/results/results.component';
+import { UpdateComponent } from './student/results/results/update/update.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -44,14 +49,21 @@ import { AdsComponent } from './ads/ads.component';
     MensComponent,
     WomensComponent,
     KidsComponent,
-    AdsComponent
+    AdsComponent,
+    StudentComponent,
+    CreateComponent,
+    ResultsComponent,
+    UpdateComponent,
+    SignupComponent,
+
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

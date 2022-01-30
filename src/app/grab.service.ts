@@ -12,17 +12,21 @@ export class GrabService {
   universityData: BehaviorSubject<any> = new BehaviorSubject<any>([]);
   universityDataSubject = this.universityData.asObservable();
 
+  studentDetails: BehaviorSubject<any> = new BehaviorSubject<any>({});
+  studentDetailsSubject = this.studentDetails.asObservable();
+
+
 
   //handle spinner
   spinner: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
   spinnerSubject = this.spinner.asObservable();
 
 
-  studentDetails: StudentI  = {
-    id: 10,
-    name: 'Tom',
-    //email: 'tom@gmail.com'
-  }
+  // studentDetails: StudentI  = {
+  //   id: 10,
+  //   name: 'Tom',
+  //   //email: 'tom@gmail.com'
+  // }
 
   constructor() { }
 
@@ -46,6 +50,10 @@ export class GrabService {
 
   getEmployeeDetails(): {id: number, courseName: string} {
     return {id: 1, courseName: 'CS'};
+  }
+
+  updateDetailsInfo(studentDetails: any) {
+    this.studentDetails.next(studentDetails);
   }
 
 
