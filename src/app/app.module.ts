@@ -28,6 +28,9 @@ import { CreateComponent } from './student/create/create/create.component';
 import { ResultsComponent } from './student/results/results/results.component';
 import { UpdateComponent } from './student/results/results/update/update.component';
 import { SignupComponent } from './signup/signup.component';
+import { LoginComponent } from './login/login.component';
+import { CommonModule } from '@angular/common';
+
 
 @NgModule({
   declarations: [
@@ -55,6 +58,8 @@ import { SignupComponent } from './signup/signup.component';
     ResultsComponent,
     UpdateComponent,
     SignupComponent,
+    LoginComponent,
+
 
 
   ],
@@ -63,7 +68,8 @@ import { SignupComponent } from './signup/signup.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -10,6 +10,7 @@ import { GrabService } from '../grab.service';
 export class NavigationComponent implements OnInit, OnDestroy{
 
   studentData: any;
+  userLoginStatus: boolean = false;
 
   constructor(private router: Router, private grabService: GrabService) {}
 
@@ -21,6 +22,11 @@ export class NavigationComponent implements OnInit, OnDestroy{
 
       }
     );
+
+
+    this.grabService.userLoggedInStatusSubject.subscribe((status) => {
+      this.userLoginStatus = status;
+    })
   }
 
 
@@ -57,6 +63,10 @@ export class NavigationComponent implements OnInit, OnDestroy{
 
   navigateToSignUp() {
     this.router.navigate(['signup']);
+  }
+
+  navigateToLogin() {
+    this.router.navigate(['login']);
   }
 
   ngOnDestroy(): void {

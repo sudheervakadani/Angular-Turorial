@@ -13,7 +13,11 @@
 
   <a (click)="navigateToStudent()" > Student </a>
 
-  <a (click)="navigateToSignUp()">Signup</a>
+  <a *ngIf="!userLoginStatus" (click)="navigateToSignUp()">Signup</a>
+
+  <a *ngIf="!userLoginStatus" (click)="navigateToLogin()">Login</a>
+
+  <a *ngIf="userLoginStatus">Logout</a>
 
   <a >{{studentData.studentName}}</a>
 

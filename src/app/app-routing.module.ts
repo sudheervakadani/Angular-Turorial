@@ -21,12 +21,16 @@ import { ResultsComponent } from './student/results/results/results.component';
 import { CreateComponent } from './student/create/create/create.component';
 import { UpdateComponent } from './student/results/results/update/update.component';
 import { SignupComponent } from './signup/signup.component';
+import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './auth.guard';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   {path: 'signup', component: SignupComponent},
-  { path: 'company', component: CompanyDetailsComponent },
+  {path: 'login', component: LoginComponent},
+  { path: 'company', component: CompanyDetailsComponent, canActivate: [AuthGuard]  },
   { path: 'employees', component: EmployeeDetailsComponent },
   {
     path: 'visa',
@@ -66,6 +70,7 @@ const routes: Routes = [
       { path: 'results', component: ResultsComponent},
       { path: 'update', component: UpdateComponent},
       { path: 'create', component: CreateComponent },
+
 
     ],
   },

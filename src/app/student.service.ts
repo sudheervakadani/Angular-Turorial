@@ -19,8 +19,12 @@ export class StudentService {
 
   signupUserApi(signUpDetails: any) {
     this.http.post('http://localhost:3010/api/signup', signUpDetails).subscribe(
-      (resp) => {},
-      (err) => {}
+      (resp) => {
+        console.log(resp);
+      },
+      (err) => {
+        console.log(err);
+      }
     );
   }
 }

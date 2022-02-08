@@ -1,0 +1,6 @@
+<form [formGroup]="logInForm">
+  <input type="text" name="userName" id="userName" formControlName="userName">
+  <input type="text" name="password" id="password" formControlName="password">
+
+  <button type="submit" (click)="logInUser()">Log In</button>
+</form>

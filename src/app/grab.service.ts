@@ -15,6 +15,12 @@ export class GrabService {
   studentDetails: BehaviorSubject<any> = new BehaviorSubject<any>({});
   studentDetailsSubject = this.studentDetails.asObservable();
 
+  loggedInUserInfo: BehaviorSubject<any> = new BehaviorSubject<any>({});
+  loggedInUserInfoSubject = this.loggedInUserInfo.asObservable();
+
+  userLoggedInStatus: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  userLoggedInStatusSubject = this.userLoggedInStatus.asObservable();
+
 
 
   //handle spinner
@@ -54,6 +60,11 @@ export class GrabService {
 
   updateDetailsInfo(studentDetails: any) {
     this.studentDetails.next(studentDetails);
+  }
+
+  updateLoggedInUserInfoInBs(userInfo: any, loggedInUserStatus: boolean) {
+    this.loggedInUserInfo.next(userInfo);
+    this.userLoggedInStatus.next(loggedInUserStatus);
   }
 
 
