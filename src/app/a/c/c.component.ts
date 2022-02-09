@@ -14,7 +14,7 @@ export class CComponent implements OnInit {
   constructor(private grabService: GrabService) { }
 
   ngOnInit(): void {
-    this.grabService.universityDataSubject.subscribe(
+    this.grabService.universityData$.subscribe(
       (universityData: any) => {
         this.universityInfo = universityData;
         console.log(universityData);

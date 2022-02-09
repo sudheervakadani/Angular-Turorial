@@ -10,16 +10,16 @@ export class GrabService {
 
   //university behaviuor subj
   universityData: BehaviorSubject<any> = new BehaviorSubject<any>([]);
-  universityDataSubject = this.universityData.asObservable();
+  universityData$ = this.universityData.asObservable();
 
   studentDetails: BehaviorSubject<any> = new BehaviorSubject<any>({});
-  studentDetailsSubject = this.studentDetails.asObservable();
+  studentDetails$ = this.studentDetails.asObservable();
 
   loggedInUserInfo: BehaviorSubject<any> = new BehaviorSubject<any>({});
-  loggedInUserInfoSubject = this.loggedInUserInfo.asObservable();
+  loggedInUserInfo$ = this.loggedInUserInfo.asObservable();
 
   userLoggedInStatus: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
-  userLoggedInStatusSubject = this.userLoggedInStatus.asObservable();
+  userLoggedInStatus$ = this.userLoggedInStatus.asObservable();
 
 
 

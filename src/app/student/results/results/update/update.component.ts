@@ -15,7 +15,7 @@ export class UpdateComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.updateStudent();
-    this.grabService.studentDetailsSubject.subscribe(
+    this.grabService.studentDetails$.subscribe(
       (data) => {
         if(data) {
           this.patchValuesIntoForm1(data);

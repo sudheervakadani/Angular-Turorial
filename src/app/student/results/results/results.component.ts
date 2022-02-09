@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { LOAD_SPINNER } from 'src/app/actions';
 import { GrabService } from 'src/app/grab.service';
+import { AppState } from 'src/app/reducer';
 import { StudentService } from 'src/app/student.service';
 import { StudentComponent } from '../../student.component';
 
@@ -17,7 +20,7 @@ export class ResultsComponent implements OnInit {
 
 
   constructor(private router: Router,
-    private grabService: GrabService,
+    private grabService: GrabService, private store: Store<AppState>,
     private studentService: StudentService) { }
 
   ngOnInit(): void {
@@ -29,10 +32,16 @@ export class ResultsComponent implements OnInit {
   }
 
   getStudent() {
+    //this.store.dispatch({type: LOAD_SPINNER, payload: true});
     this.studentService.getStudentDetails().subscribe(
       (successResponse: any) => {
         this.studentData = successResponse.data;
         console.log(successResponse, 'get call Success');
+        //setTimeout(() => {
+            //      this.store.dispatch({type: LOAD_SPINNER, payload: false});
+
+       // }, 2000)
+
       },
       () => {}
     );

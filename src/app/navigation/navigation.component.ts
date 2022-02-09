@@ -24,7 +24,7 @@ export class NavigationComponent implements OnInit, OnDestroy{
     );
 
 
-    this.grabService.userLoggedInStatusSubject.subscribe((status) => {
+    this.grabService.userLoggedInStatus$.subscribe((status) => {
       this.userLoginStatus = status;
     })
   }

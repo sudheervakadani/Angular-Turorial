@@ -16,11 +16,11 @@ export class AuthGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-      this.grabService.userLoggedInStatusSubject.subscribe((status) => {
+      this.grabService.userLoggedInStatus$.subscribe((status) => {
         this.userLoggedinStatus = status;
       })
 
-      this.grabService.loggedInUserInfoSubject.subscribe((userInfo) => {
+      this.grabService.loggedInUserInfo$.subscribe((userInfo) => {
         this.loggedInUserInfo = userInfo;
       })
       if(this.userLoggedinStatus && this.loggedInUserInfo.role === 'Admin') {

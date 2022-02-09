@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,6 +30,9 @@ import { UpdateComponent } from './student/results/results/update/update.compone
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { CommonModule } from '@angular/common';
+import { AuthInterceptor } from './auth.interceptor';
+import { StoreModule } from '@ngrx/store';
+import { appReducer } from './reducer';
 
 
 @NgModule({
@@ -69,9 +72,12 @@ import { CommonModule } from '@angular/common';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    CommonModule
+    CommonModule,
+    StoreModule.forRoot(appReducer)
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
