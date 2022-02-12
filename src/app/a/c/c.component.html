@@ -1,0 +1,18 @@
+
+<div>
+  <h5> => Data showing from C Comhponent</h5> <br>
+  <table class="table" >
+    <tr>
+      <th>Country code</th>
+      <th>UniversityName</th>
+      <th>country</th>
+      <th>Website</th>
+    </tr>
+    <tr *ngFor="let university of universityInfo">
+      <td>{{university.alpha_two_code}}</td>
+      <td>{{university.name}}</td>
+      <td>{{university.country}}</td>
+      <td>{{university.web_pages}}</td>
+    </tr>
+    </table>
+</div>

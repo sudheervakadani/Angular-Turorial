@@ -1,0 +1,10 @@
+<div> <br>
+  <h5> => Data showing from B Component</h5>
+  <!-- <button (click)="getResults('united states')"> Get Results</button> <br> -->
+  <label for="country"> Enter A country Name</label> <br>
+  <input type="text" name="country" id="country" [(ngModel)]="country" >
+  <button type="submit" (click)="getResults()"> Search </button>
+  <br>
+</div>
+<br>
+<p> Universities List for the country {{country}}</p>

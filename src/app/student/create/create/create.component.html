@@ -1,0 +1,12 @@
+
+<p> Create Component rendering</p>
+
+<form [formGroup]="studentForm">
+  <input type="text" placeholder="Student Name" formControlName="studentName"><br>
+  <input type="text" placeholder="Student ID" formControlName= "studentId"><br>
+  <input type="text" placeholder="Student Phone Number" formControlName="studentPhoneNumber"><br>
+  <input type="text" placeholder="Course " formControlName= "course"><br>
+  <input type="number" placeholder="Year" formControlName= "year"><br>
+  <input type="text" placeholder="Country" formControlName= "country"><br>
+  <button type="submit" (click)="saveStudent()"> Add Student </button>
+</form>

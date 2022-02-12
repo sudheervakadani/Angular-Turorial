@@ -1,0 +1,28 @@
+<div class="topnav">
+  <a (click)="navigateToHome()" > Home </a>
+
+  <a (click)="navigateToCompany()"> Company </a>
+
+  <a (click)="navigateToEmployees()"> Employees </a>
+
+  <a (click)="navigateToVisa()"> Visa </a>
+
+  <a (click)="navigateToA()" > A </a>
+
+  <a (click)="navigateToMenu()" >Menu</a>
+
+  <a (click)="navigateToStudent()" > Student </a>
+
+  <a *ngIf="!userLoginStatus" (click)="navigateToSignUp()">Signup</a>
+
+  <a *ngIf="!userLoginStatus" (click)="navigateToLogin()">Login</a>
+
+  <a *ngIf="userLoginStatus">Logout</a>
+
+  <a >{{studentData.studentName}}</a>
+
+
+</div>
+<div>
+  <p style="text-align: center;"> Welcome to My Website toggle through the navigation links for more info.</p>
+</div>

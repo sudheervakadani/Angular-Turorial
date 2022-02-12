@@ -1,78 +1,18 @@
-<hr>
-<h1 style="color: red; text-align: center;"> {{title}}  {{hours}} Hours</h1>
-<!-- string interpolation -->
+<!-- {{showSpinner}} -- {{!showSpinner}} -->
 
-<hr>
+<div *ngIf="!showSpinner">
 
-<h2 style="color: silver; text-align: center;"> My App Is Working</h2>
-<button class="button" (click)="greetPerson()">click to greet </button> <br>
 
-<br>
+  <app-header></app-header>
+  <app-navigation></app-navigation>
+  <div class="row">
 
-<!-- <button class="button" (click)="displayFirstName()">Name</button> <br> -->
+    <!-- <app-company-details></app-company-details>
+<app-employee-details></app-employee-details>
+<app-visa-details></app-visa-details> -->
 
-<label for= "updateTitle "></label>
-<input type="text" #box (keyup.enter)="updateTitle(box.title)">
-<button class="button" (click)="updateTitle('raj')">SUBMIT</button>
-<br>
-<button class="button" (click)="changeFirstName('RRR')"> Name Changes </button>
-<form class="input" > {{firstNames[0]}} </form>
-<br>
-<br>
-<button class="button" (click)="changeTitle('Angular ', 50)">Angular</button> <br>
-<button class="button" (click)="changeTitle('REACT ', 60)">REACT</button><br>
-<button class="button" (click)="changeTitle('VUE ', 70)">VUE</button><br>
-<button (click)="giveMessage()">Test Button</button>
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<h1 *ngIf="showSpinner">Loading....</h1>
 
-<form>
-  <label for="firstName">First Name </label>
-  <!-- <input class="input" type="text" name="firstName" (mouseover)="giveMessage()"> -->
-  <br> <br>
-  <label for="lastName">Last Name </label>
-  <input style="text-align-last: center;" type="text" name="lastName">
-  <br><br>
-  <button class="button" style="color: slategrey; width: 30%; align-content: center;" type="submit" (click)="searchRecords()"> SEARCH
-  </button>
-</form>
-
-<br>
-<br>
-
-<h2> Table Test</h2>
-
-<br>
-
-<table style="width:90%; margin: auto;">
-  <tr>
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>City</th>
-    <th>Country</th>
-  </tr>
-  <tr>
-    <td>sudheer</td>
-    <td>Vakadani</td>
-    <td>VANCOUVER</td>
-    <td> CANADA</td>
-  </tr>
-  <tr>
-    <td>Ajay</td>
-    <td>Attapuram</td>
-    <td>VANCOUVER</td>
-    <td>CANADA</td>
-  </tr>
-  <tr>
-    <td>Teja</td>
-    <td>Akula</td>
-    <td>Richmond</td>
-    <td>CANADA</td>
-  </tr>
-  <tr>
-    <td>Kalyan</td>
-    <td>pinninti</td>
-    <td>BURNABY</td>
-    <td>CANADA</td>
-  </tr>
-</table>
-
-<br><br>

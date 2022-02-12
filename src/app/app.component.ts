@@ -1,58 +1,32 @@
-import { Component } from '@angular/core';
+import { state } from '@angular/animations';
+import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { GrabService } from './grab.service';
+import { AppState } from './reducer';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
-  title: string = 'Tutorial';
-  hours: number = 0;
-  name: string = 'sravan';
-  firstNames: string[] = ['Sudheer', 'Ajay', 'Teja', 'Shanthan', 'Kalyan'];
-  lastName: string[] = [
-    'Vakadani',
-    'Attapuram',
-    'Akula',
-    'Anumalapalli',
-    'Pinninti',
-  ];
-  greet: string = 'Hi';
-  city: string = 'Vancouver';
+export class AppComponent implements OnInit{
 
-  constructor() {
+  showSpinner: boolean = false;
+
+  constructor(private grabSerive: GrabService, private store: Store<AppState>) {
     console.log("constructor works");
   }
+  ngOnInit(): void {
 
-  displayFirstName() {
-    alert(this.firstNames[0]);
-    console.log(this.firstNames);
-  }
-  greetPerson() {
-    alert('Hi ' + this.firstNames[0] + ', Have a Nice Day!');
-    console.log('greeted');
-  }
-  changeTitle(newtitle: string, hours: number) {
-    this.title = newtitle;
-    this.hours = hours;
-    console.log(this.title);
-  }
+    this.store.select((state)=>state.homeState.loadingStatus).subscribe(
+      (response)=>{
+        this.showSpinner = response;
+      }
+    );
 
-  changeFirstName(name: string) {
-    this.firstNames[0] = name;
-    alert(this.firstNames[0]);
+    // this.grabSerive.spinnerSubject.subscribe((spineerInfo) => {
+    //   console.log(spineerInfo);
+    //   this.showSpinner = spineerInfo;
+    // })
   }
-
-  updateTitle(name: string) {
-    this.firstNames[0] = name;
-    console.log(this.firstNames);
-  }
-
-  giveMessage() {
-    this.updateTitle('tom');
-  }
-  searchRecords() {
-    this.greetPerson();
-  }
-
 }

@@ -1,0 +1,10 @@
+<form [formGroup]="signUpForm">
+  <input type="text" name="userName" id="userName" formControlName="userName">
+  <input type="text" name="password" id="password" formControlName="password">
+  <select formControlName="role">
+    <option value="Admin">Admin</option>
+    <option value="Developer">Developer</option>
+  </select>
+
+  <button type="submit" (click)="signUpUser()">SIgn Up</button>
+</form>
